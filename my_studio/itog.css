@@ -1,0 +1,210 @@
+body {
+    background-color: #F0F0F3;
+    margin: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+}
+.main-header {
+display: flex; /* Включаем Flexbox - элементы встают в ряд */
+justify-content: space-between; /* Расталкиваем логотип и меню по краям */
+padding: 22px 40px; /* Добавляем внутренний воздух (пух) сверху/снизу и слева/справа */
+background-color: rgba(255, 255, 255, 0.7);
+border-bottom: 1px solid #eeeeee; /* Тонкая серая линия снизу для красоты */
+border-radius: 0 0 020px 20px;
+backdrop-filter: blur(10px);
+position: sticky; /* Если хочешь, чтобы header был всегда виден */
+top: 0; /* Прилипнуть, когда коснешься верхнего края (0 пикселей) */
+z-index: 100;
+-webkit-backdrop-filter: blur(10px); /* Для поддержки в Safari */
+}
+.menu {
+display: flex;
+gap: 30px; /* Идеальный пробел между ссылками, работает только во Flexbox! */
+}
+.menu a {
+text-decoration: none; /* Убираем подчеркивание */
+color: #333333;
+}
+.logo {
+font-weight: bold;
+font-size: 18px;
+letter-spacing: 2px; /* Дизайнерская фишка: разрядка букв */
+}
+.hero-section {
+display: flex; /* Включаем Flexbox */
+justify-content: center; /* Центрируем по горизонтали */
+align-items: center; /* Центрируем по вертикали */
+height: 50vh; /* Занимаем 80% высоты экрана (оставили место для шапки) */
+background-color: #f8f9fa;
+text-align: center; /* Центрируем сам текст внутри блока */
+}
+.hero-content h1 {
+font-size: 56px;
+background: linear-gradient(45deg, #bd2476, #e94098, #fe9ccc); /* Создаем градиент от фиолетового к оранжевому */
+/* Следующие две строчки обрезают градиент строго по форме букв! */
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-bottom: 10px;
+}
+.bage-block {
+height: 30vh;
+background-color: #222;
+padding: 10% 5%;
+justify-content: center;
+gap: 29px;
+display: flex;
+}
+.service-card {
+background-color: #ffffff;
+padding: 23px;
+border-radius: 20px;
+width: 300px;
+box-shadow : 0 10px 30px rgba(0,0,0,0.05); /* Легкая тень из прошлой лабы */
+position: relative; /* КРИТИЧЕСКИ ВАЖНО: Делаем карточку "забором" для бейджа */
+}
+
+.service-card p {text-align: left;}
+
+
+.badge {
+position: absolute; /* Вырываем бейдж из нормального потока */
+top: 0; /* Приказываем лететь в правый верхний угол НАШЕЙ КАРТОЧКИ */
+left: -11px;
+background-color: #ff4f9e;
+color: white;
+padding: 6px 14px;
+border-radius: 50px;
+font-size: 12px;
+font-weight: bold;
+}
+
+.badge {
+top: -15px; /* Вылезли наверх за пределы карточки */
+left: 9px; /* Вылезли вправо за пределы карточки */
+box-shadow: 0 5px 15px rgba(255, 79, 158, 0.54); /* Добавили цветную тень самому бейджу */
+}
+.container {
+    max-width: 600px;               
+    margin: 38px auto;          
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 56px;
+    border-radius: 24px;
+    text-align: center;
+}
+p {
+    margin: 10px 0 20px 0;          
+    color: #222;
+    text-align: center;
+    display: block;
+}
+
+h1 {
+    margin-top: 0;          
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+    display: block;            
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 0;          
+    margin-bottom: 20px;
+    color: #222;
+}
+.project-card {
+    background-color: #1A1A1A;   
+    color: #ffffff;
+    padding: 30px 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 24px;
+    display: block;  
+}
+.uniqe {
+    color: #ffd5e8;
+    margin: 5px;
+}
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;            
+    margin: 30px auto;
+    box-shadow: 0 5px 15px rgba(255, 79, 158, 0.44);
+    
+}
+.center-image {
+    width: 50%;               
+    max-width: 400px;          
+    display: block;            
+    margin: 40px auto;
+    border-radius: 16px;
+}
+.status-badge {      
+    border: 1px solid #ff4f9e; 
+    color: #ff4f9e;      
+    background-color: #f5e8ed; 
+    padding: 10px 18px;    
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+    display: inline-block;
+}
+.client-quote {
+    font-style: italic;
+    color: #555555;
+    border-left: 4px solid #ff4f9e;  
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    background-color: #fff1f7;
+    padding: 20px 20px 20px 24px;
+    border-radius: 0 16px 16px 0;
+}
+.contact-btn {
+    background-color: #1A1A1A;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 16px 32px;            
+    display: block;
+    width: fit-content;             
+    margin: 40px auto 0 auto;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+.contact-btn:hover {
+    background-color: #ff4f9e;
+    box-shadow: 0 5px 15px rgba(255, 0, 97, 0.4);
+    transform: translateY(-2px);
+}
+.floating-chat-btn {
+width: 60px;
+border-radius: 50%;
+font-size: 40px;
+bottom: 70px; 
+left: 58px; 
+text-decoration: none;
+text-align: center;
+background-color: #222;
+position: fixed;
+z-index: 999;
+}
+.tooltip {
+position: absolute;
+width: 110px;
+height: 20px;
+top: 19px;
+left: 66px;
+opacity: 0;
+font: bold 16px Segoe UI;
+color:#222;
+transition: all 0.3s ease;
+}
+    
+.floating-chat-btn:hover .tooltip {
+    opacity: 1; 
+}
